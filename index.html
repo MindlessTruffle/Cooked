@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Am I cooked?</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .card-container {
+            margin-top: 20px;
+        }
+        .percentage {
+            font-size: 0.8em;
+            color: gray;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1 class="mt-5">Am I cooked?</h1>
+    <div class="alert alert-info" role="alert">
+        <span id="goodCount">Good: 0</span>
+        <span id="goodPercentage" class="percentage"></span> | 
+        <span id="okCount">OK: 0</span>
+        <span id="okPercentage" class="percentage"></span> | 
+        <span id="badCount">Bad: 0</span>
+        <span id="badPercentage" class="percentage"></span>
+    </div>
+    <div class="form-group mt-3">
+        <label for="worryInput">What are you worried about?</label>
+        <input type="text" class="form-control" id="worryInput" placeholder="Enter your worry">
+        <button class="btn btn-primary mt-2" onclick="addWorry()">Add Worry</button>
+    </div>
+    <div id="worryCards" class="card-container"></div>
+    <button class="btn btn-secondary mt-3" onclick="goToPastWorries()">Generate Poem</button>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
